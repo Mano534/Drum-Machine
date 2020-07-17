@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.center{
+    margin : 100px auto ; 
+    text-align: center;
+     width : 80% ; 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.d-flex{
+    display : flex ;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-split{
+    margin : 0px auto ; 
+    width : 80% ; 
+    min-height: 200px;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
-
-.App-link {
-  color: #61dafb;
+.other-Content{
+    width: 40% ; 
+    padding : 20px ;
+    height: 100%;
 }
+.button-group{
+    width: 50% ; 
+    padding : 20px ;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button-group > button {
+    background-color: rgb(0, 62, 161);
+    width : 20% ; 
+    padding : 20px;
+    margin: 10px;
+    border: none ;
+    font-size: 2rem;
+    color : #fff;
+    transition: .5s;
+    border-radius: 3px;
+}
+.display-drumpad-content{
+    min-width: 30%;
+    padding: 5px 10px;
+    background-color: aqua;
+    color : #fff ;
+    text-align: center;
+    font-size:1.5rem ;
+    display: block;
+}
+.btngroup{
+    width : 80% ;
+    margin: 10px auto;
+    justify-content: space-between;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.controls > label{
+    display: block;
+    font-size : 1.2rem
+}
+.controls[name="label in the right"]{
+    text-align: right
+}
+.switch{
+    appearance: none;
+    transition: .5s;
+    width: 50px;
+    height: 25px ;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #ddd ; 
+    position: relative;
+}
+.switch:checked{
+    background-color: rgb(32, 110, 255);
+}
+.switch::before{
+    position: absolute;
+    content: '';
+    top:-10%;
+    left:0;
+    transition: .5s;
+    height: 20px;
+    width:20px; 
+    border-radius: 50%;
+    transform: scale(1.2);
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.switch:checked::before{
+    left:60%;
+}
+@media (max-width: 700px){
+    .main-split{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width : 500px){
+    .button-group > button {
+        font-size: 1.2rem;
+    }
+    .button-group{
+        width: 100%;
+    }
+    .other-Content{
+        width: 100%;
+    }
+
+}
+@media (max-width : 350px){
+    .button-group > button {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 8px;
+    }
+
+
 }
